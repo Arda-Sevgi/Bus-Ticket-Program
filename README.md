@@ -1,5 +1,7 @@
 # Nottingham Bus Ticket Booking System
 
+**Public project overview — academic assessment.** This repository contains documentation only. The Python implementation and assessment source are private and cannot be published. Project scope, design decisions and non-confidential details can be discussed on request; this is not an offer to distribute restricted source code.
+
 A comprehensive command-line bus ticket booking system developed in Python, featuring user authentication, ticket management, and booking functionality for Nottingham's bus network.
 
 ## 📋 Table of Contents
@@ -7,8 +9,6 @@ A comprehensive command-line bus ticket booking system developed in Python, feat
 - [Features](#features)
 - [System Architecture](#system-architecture)
 - [Development Process](#development-process)
-- [Installation & Setup](#installation--setup)
-- [Usage Guide](#usage-guide)
 - [Technical Implementation](#technical-implementation)
 - [Known Limitations](#known-limitations)
 - [Future Enhancements](#future-enhancements)
@@ -192,73 +192,11 @@ Enhanced the system with robust validation and user experience improvements:
 - Suitable performance for small to medium-scale operations (hundreds of bookings)
 - For large-scale deployments, database implementation would provide better performance
 
-## 🚀 Installation & Setup
+## Reviewing this project
 
-### Prerequisites
-- Python 3.6 or higher
-- No external dependencies required (uses standard library only)
+This is a Python command-line project using CSV storage, not a web application. There is no runnable application in this public repository, so cloning it retrieves the overview only. For a runnable public Python example, see my [Fruit Inventory project](https://github.com/Arda-Sevgi/Fruit-Inventory-).
 
-### Installation Steps
-
-1. Download or clone the project files
-2. Ensure `bus_ticket_system.py` is in your desired directory
-3. Run the programme:
-```bash
-python bus_ticket_system.py
-```
-
-The system will automatically create the necessary CSV files on first run in the same directory as the script.
-
-## 📖 Usage Guide
-
-### First Time Setup
-
-When you first run the programme, it will create three CSV files with default data:
-- An admin account (username: `admin`, password: `admin123`)
-- Seven pre-configured bus routes covering major Nottingham locations
-- An empty bookings file ready to record transactions
-
-### For Customers
-
-#### 1. Registration:
-- Select option 1 from the main menu
-- Provide username (minimum 4 characters)
-- Create password (minimum 6 characters)
-- Enter full name (alphabetic characters only)
-- Provide email address (valid format required)
-- Enter phone number (UK format: 0115-000-0000 or +447123456789)
-- All fields include validation and helpful error messages
-
-#### 2. Booking a Ticket:
-- Login with your credentials
-- View available routes with all details
-- Enter the ticket ID of your chosen route
-- Specify the number of tickets (quantity)
-- Select travel date in DD/MM/YYYY format (within 90 days)
-- Receive booking confirmation with unique booking ID
-
-#### 3. Viewing Bookings:
-- Access "View My Bookings" from the customer menu
-- See all your booking history with complete details
-- View booking IDs, routes, travel dates, quantities, and total prices
-
-### For Administrators
-
-Login with admin credentials:
-- **Username**: `admin`
-- **Password**: `admin123`
-
-**Available Functions**:
-- View all routes in the system with current availability
-- Add new bus routes with complete details (route name, departure, destination, price, seats, time)
-- Update existing route information (modify any field)
-- View all customer bookings across the system for monitoring
-
-### Navigation Tips
-- Type `back` at most input prompts to return to the previous screen
-- Press Enter to continue after viewing information
-- Press Enter without typing to keep current values when updating routes
-- The system provides clear error messages with guidance for corrections
+[Request project details](mailto:ardasevgiuk@outlook.com?subject=Bus%20Ticket%20project%20enquiry) · [Portfolio](https://arda-sevgi.github.io/Portfolio/)
 
 ## 🔧 Technical Implementation
 
@@ -306,7 +244,7 @@ MIN_PASSWORD_LENGTH = 6      # Minimum password characters
 - **Production Unsuitability**: Not suitable for high-traffic environments without database migration
 
 ### Security Concerns
-- **Plain Text Passwords**: Passwords stored without encryption (acceptable for academic projects, not for production)
+- **Plain Text Passwords**: Passwords stored without encryption (a learning-project limitation; unsuitable for real credentials or production)
 - **No Session Management**: No session timeout or forced logout functionality
 - **No Audit Trail**: User actions are not logged for security monitoring
 - **Admin Account**: Default admin credentials should be changed in production use
@@ -335,7 +273,7 @@ MIN_PASSWORD_LENGTH = 6      # Minimum password characters
 - **Fixed Routes**: No dynamic route planning or suggestions
 - **No User Profiles**: Limited user information and no preference storage
 
-## 🔮 Future Enhancements
+## 🔮 Proposed Future Enhancements
 
 ### High Priority Improvements
 
